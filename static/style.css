@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+  background: #ffffff; 
+
+border-bottom: 40px solid rgb(32, 94, 145);
+
+}
+
+
+/* Navigation bar CSS */
+.custom-navbar{
+    background-color: #5ebad8;
+    border-bottom: 7px solid rgb(235, 177, 157);
+}
+.custom-navbar .navbar-nav .nav-link {
+    display: inline-block;
+    color: white;
+    margin: 15px;
+    font-size:18px;
+    font-family: 500;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: color .3s;
+}
+.custom-navbar .navbar-nav .nav-link::after{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background: rgb(232, 197, 69);
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top .5s , opacity .5s;
+    
+}
+.custom-navbar .navbar-nav .nav-link:hover{
+    color: rgb(255, 255, 255);
+    padding: 7px 20px 7px 20px;
+   
+} 
+.custom-navbar .navbar-nav .nav-link:hover::after{
+    top: 50%;
+    opacity: 1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.custom-navbar .navbar-nav .nav-link.active {
+
+    background-color:#70b173;
+    border-radius: 40px;
+    padding: 7px 20px 7px 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+} 
+
+
+/* Style for disply flex docs and google form */
+.Bigcontainer {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-direction: column;/* changes to max boxes column wise*/
+}
+
+.container1, .container2 {
+    width: 100%;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.container1 iframe {
+    width: 100%; /*increase width of iframe*/
+    height:842px;
+    border: none;
+  
+}.container2 iframe {
+    width: 700px; /*increase width of iframe*/
+    height: 650px;
+    border: none;
+}
+
+/* CSS for bot */
+.bot-link ,.doc-link{
+    
+    text-decoration: none;
+    color: #fff;
+    margin: auto;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 80px;
+}
+.end-container{
+    align-items: center;
+    background:url(/static/lastbg.jpg) no-repeat;
+    min-height:90vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.end .content{
+    display: inline-table;
+    align-items: center;
+    max-width: 35%;
+    margin:170px 0px 15px 190px;
+}
+
+.end .content h3{
+    color: #012A72;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+
+}
+
+.end .content span{
+    color:#002970;
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    
+    margin-bottom: 15px ;
+    line-height: 1.5;
+}
+
+.end-btn {
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 55px;
+    background:#fff;
+    color: #002970;
+    padding: 18px 37px;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+}
+
+.end-btn:hover{
+    background:#fff;
+ box-shadow:  0px 6px 6px 0px rgba(117, 111, 111, 0.25); 
+}
+.paginations{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    padding-bottom: 20px;
+    flex-direction: column;
+
+    
+}
+#tnext-link[disabled],#next-link[disabled] {
+    pointer-events: none; /* Disable the link's click event */
+    text-decoration: none; /* Remove the underline for disabled links */
+    color: rgb(249, 243, 243); /* Change the text color for disabled links */
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 25px;
+    background:grey;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    
+    
+}#next-link {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 25px;
+    background:#1b44c9;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    transition: all .5s;
+}#next-link:hover{
+    background:#1b44c9;
+    color: #ffffff;
+    box-shadow:  0px 6px 6px 0px rgba(117, 111, 111, 0.25); 
+    transform: translateY(-7px);
+}#tnext-link[disabled]{
+    font-size: 15px;
+
+}
+#prev-button,#tnext-link{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 25px;
+    background:#1b44c9;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+   
+}#tnext-link{
+    margin-left: 85%;
+}
+.top-paginations{
+    margin:10px 0 0 35px;
+    
+}.end-paginations{
+    margin-left: 35px;
+    
+}
+
+
+
